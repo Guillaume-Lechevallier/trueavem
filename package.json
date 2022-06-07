@@ -1,0 +1,78 @@
+{
+  "name": "timeline-server",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.3.0",
+    "@angular/cdk": "^13.3.4",
+    "@angular/common": "~13.3.0",
+    "@angular/compiler": "~13.3.0",
+    "@angular/core": "~13.3.0",
+    "@angular/forms": "~13.3.0",
+    "@angular/material": "~13.3.4",
+    "@angular/platform-browser": "~13.3.0",
+    "@angular/platform-browser-dynamic": "~13.3.0",
+    "@angular/router": "~13.3.0",
+    "@okta/okta-angular": "^5.2.0",
+    "cors": "2.8.5",
+    "crypto": "^1.0.1",
+    "express": "4.17.1",
+    "fs": "^0.0.1-security",
+    "google": "^2.1.0",
+    "highcharts": "^10.0.0",
+    "mysql": "^2.18.1",
+    "net": "^1.0.2",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "react-scripts": "^5.0.1",
+    "rxjs": "~7.5.0",
+    "stream": "^0.0.2",
+    "timers": "^0.1.1",
+    "tslib": "^2.3.0",
+    "url": "^0.11.0",
+    "webpack": "^5.73.0",
+    "zlib": "^1.0.5",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^13.1.0",
+    "@angular-builders/dev-server": "^7.3.1",
+    "@angular-devkit/build-angular": "~13.3.2",
+    "@angular/cli": "~13.3.2",
+    "@angular/compiler-cli": "~13.3.0",
+    "@types/jasmine": "~3.10.0",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~4.0.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.6.2"
+  },
+  "browser": {  "fs": false,
+    "tls": false,
+    "crypto": false
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guillaume-Lechevallier/AVEM_ESPI_Telephono.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guillaume-Lechevallier/AVEM_ESPI_Telephono/issues"
+  },
+  "homepage": "https://github.com/Guillaume-Lechevallier/AVEM_ESPI_Telephono#readme"
+}

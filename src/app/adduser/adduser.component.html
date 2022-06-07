@@ -1,0 +1,76 @@
+
+<body>
+<br>
+<h3>Ajouter un utilisateur : </h3>
+<table>
+    <tr>
+        Renseignez type d'utilisateur :
+        <mat-form-field>
+            <mat-label>Type d'utilisateur</mat-label>
+            <mat-select (selectionChange)="changeClient($event.value)" placeholder="Client*">
+                <mat-option *ngFor="let user of user" [value]="user.value" id="selecttype">
+                    {{user.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </tr>
+    <tr>
+        Renseignez un numéro court :
+        <mat-form-field>
+            <mat-label>Ex : 000000</mat-label>
+            <input matInput (input)="changenumerocourt()" id="numerocourt" >
+        </mat-form-field>
+        Ce qui donnera comme numéro long : <b>{{numerolong}}</b>
+    </tr>
+    <div id="userselected" style="display:none;">
+        Renseignez un utilisateur (adresse mail) :
+        <mat-form-field>
+            <mat-label>Ex : john.doe@avem-groupe.com</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <button (click)="confirmation()" class="pl-3" color="primary" mat-button>Confirmer</button>
+        Nom:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{nom}}>
+        </mat-form-field>
+        Nom de famille:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{prenom}}>
+        </mat-form-field>
+        Id:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{idad}}>
+        </mat-form-field>
+        Site:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{site}}>
+        </mat-form-field>
+        <mat-checkbox>Envoyer un mail de confirmation à l'utilisateur</mat-checkbox>
+
+    </div>
+    <div id="errorusernotfund" style="display:none;">
+        <span style="color:red">utilisateur non trouvé !</span>
+    </div>
+    <div id="otherselected" style="display:none;">
+        <tr>
+            <td>Renseignez le nom du groupe:</td>
+            <td>
+                <mat-form-field>
+                    <mat-label>Ex : Commercial</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </td>
+        </tr>
+    </div>
+    <tr>
+        <td>
+            <button color="primary" mat-button id="boutonconfirmer">Ajouter un utilisateur !</button>
+        </td>
+    </tr>
+</table>
+
+</body>

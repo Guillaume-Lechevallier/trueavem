@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
@@ -21,6 +22,7 @@ import { HistoriqueComponent } from './historique/historique.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 import { ModifyuserComponent } from './modifyuser/modifyuser.component';
 import {FormsModule} from "@angular/forms";
+import { TimelineClientComponent } from './timeline-client/timeline-client.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import {FormsModule} from "@angular/forms";
     HistoriqueComponent,
     DeleteuserComponent,
     ModifyuserComponent,
+    TimelineClientComponent,
   ],
     imports: [
         BrowserModule,
@@ -47,6 +50,7 @@ import {FormsModule} from "@angular/forms";
         MatTabsModule,
         MatGridListModule,
         FormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent],

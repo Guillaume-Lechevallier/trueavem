@@ -1,9 +1,14 @@
-
 <body>
 <br>
 <h1>Rechercher un utilisateur</h1>
-<div id="recherchesimple" style="display:none;">
-    <h2>Numéro :
+<div id="rechercheavance" style="display:none;">
+    <h2 style="font-size:12px">
+        Rechercher un utilisateur :
+        <mat-form-field>
+            <mat-label>Ex : j.doe@avem-groupe.com</mat-label>
+            <input matInput>
+        </mat-form-field>
+        Numéro :
         <mat-form-field>
             <mat-label>Ex : 0234567891</mat-label>
             <input matInput>
@@ -13,20 +18,26 @@
             <mat-label>Ex : 123456</mat-label>
             <input matInput>
         </mat-form-field>
-        Rechercher un utilisateur :
-        <mat-form-field>
-            <mat-label>Ex : j.doe</mat-label>
-            <input matInput>
-        </mat-form-field>
+        <br>
         Types d'utilisateurs :
         <mat-form-field>
             <mat-label>Ex : VDN</mat-label>
             <input matInput>
         </mat-form-field>
+        Site :
+        <mat-form-field>
+            <mat-label>Ex : Kerlann</mat-label>
+            <input matInput>
+        </mat-form-field>
+        Opérateur :
+        <mat-form-field>
+            <mat-label>Ex : Orange</mat-label>
+            <input matInput>
+        </mat-form-field>
         <button mat-button>Rechercher</button>
     </h2>
 </div>
-<div id="rechercheavance" style="display:block;">
+<div id="recherchesimple" style="display:block; ">
     <h2>Rechercher {{typerecherche}} :
         <mat-form-field>
             <mat-label>{{exemplerecherche}}</mat-label>
@@ -42,9 +53,8 @@
             </mat-select>
         </mat-form-field>
 
-        <button mat-button (click)="test()">Rechercher</button>
+        <button mat-button (click)="rechercheruser()">Rechercher</button>
     </h2>
-
 </div>
 <mat-checkbox (change)="toggleEditable($event)" [(ngModel)]="checked">Recherche avancé</mat-checkbox>
 

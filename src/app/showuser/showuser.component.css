@@ -1,6 +1,7 @@
 body{
     background: #d7dcfd;
-    border: 2px solid #787fbb;
+    border: 1px solid #787fbb;
+
 }
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -9,6 +10,8 @@ body{
 }
 table {
     width: 100%;
+    border: 2px solid #787fbb;
+
 }
 h2{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

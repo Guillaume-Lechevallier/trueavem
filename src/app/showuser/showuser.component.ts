@@ -2,9 +2,6 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatCheckboxChange} from "@angular/material/checkbox";
-import {connexion} from "../back/app"
-
-
 
 interface user{
   value: string;
@@ -25,8 +22,8 @@ export class ShowuserComponent implements OnInit {
     {value: 'Numéro court', viewValue: 'Numéro court'},
     {value: 'Identifiant', viewValue: 'Identifiant'},
     {value: 'Type d\'utilisateur', viewValue: 'Type d\'utilisateur'},];
-  displayedColumns: string[] = ['numero', 'numerocourt', 'iduser', 'typeuser', 'boutonmodifier', 'boutonsupprimer'];
-  dataSource = new MatTableDataSource<Showuser>(ELEMENT_DATA);
+  displayedColumns: string[] = ['numero', 'numerocourt', 'iduser', 'typeuser', 'boutonmodifier'];
+  dataSource = [...ELEMENT_DATA];
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
   changetypeuser(value: string) {
     console.log(value);
@@ -61,13 +58,10 @@ export class ShowuserComponent implements OnInit {
 
   }
 
-    test(){
-    connexion();
-    };
 
   toggleEditable($event: MatCheckboxChange) {
-    var recherchesimple = document.getElementById("recherchesimple");
-    var rechercheavance = document.getElementById("rechercheavance");
+    var recherchesimple = document.getElementById("rechercheavance");
+    var rechercheavance = document.getElementById("recherchesimple");
     // @ts-ignore
     if ($event.checked){
       // @ts-ignore
@@ -81,6 +75,9 @@ export class ShowuserComponent implements OnInit {
       recherchesimple.style.display = "none"
     }
   }
+  rechercheruser(){
+
+  };
 
 }
 export interface Showuser {
@@ -89,9 +86,9 @@ export interface Showuser {
   iduser: string;
   typeuser: string;
   boutonmodifier: string;
-  boutonsupprimer : string;
+  site : string;
 }
 
 // @ts-ignore
-const ELEMENT_DATA: Showuser[] = [{numero: '0000000000', numerocourt: '000000', iduser: "j.doe",typeuser:"Utilisateur", boutonmodifier: 'H', boutonsupprimer:'H'},]
+const ELEMENT_DATA: Showuser[] = [{numero: '0000000000', numerocourt: '000000', iduser: "j.doe",typeuser:"Utilisateur", site:"Site", boutonmodifier: 'H'},]
 
